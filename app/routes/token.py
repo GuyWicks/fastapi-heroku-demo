@@ -7,7 +7,7 @@ from app.models.user import authenticate_user, fake_users_db, create_access_toke
 router = APIRouter()
 
 
-@router.post("/token", response_model=Token)
+@router.post("/", response_model=Token)
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
     if form_data.client_id:
         user = authenticate_user(
