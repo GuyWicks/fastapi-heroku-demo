@@ -22,7 +22,6 @@ app.include_router(
     prefix="/users"
 )
 
-
 app.include_router(
     token.router,
     tags=["Token"],

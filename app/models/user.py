@@ -67,6 +67,15 @@ def authenticate_user(fake_db, username: str, password: str):
     return user
 
 
+def authenticate_client_id(fake_db, client_id: str, client_secret: str):
+    user = get_user(fake_db, client_id)
+    if not user:
+        return False
+    if not verify_password(client_secret, user.hashed_password):
+        return False
+    return user
+
+
 def create_access_token(data: dict, expires_delta: Union[timedelta, None] = None):
     to_encode = data.copy()
     if expires_delta:

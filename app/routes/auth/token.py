@@ -6,10 +6,16 @@ from app.models.user import authenticate_user, fake_users_db, create_access_toke
 
 router = APIRouter()
 
+
 @router.post("/token", response_model=Token)
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
-    user = authenticate_user(
-        fake_users_db, form_data.username, form_data.password)
+    if form_data.client_id:
+        user = authenticate_user(
+            fake_users_db, form_data.client_id, form_data.client_secret)
+    else:
+        user = authenticate_user(
+            fake_users_db, form_data.username, form_data.password)
+
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
