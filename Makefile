@@ -1,5 +1,5 @@
 serve:
-	mkdocs serve &
+	mkdocs serve
 
 deploy: 
 	rm -r site
