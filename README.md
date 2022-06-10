@@ -8,9 +8,4 @@ password: `secret`
 
 
 - [Swagger Doc](https://fastapi-heroku-demo.herokuapp.com/docs)
-- [API](https://fastapi-heroku-demo.herokuapp.com)
-
-## ToDo
-
-- [ ] User accounts
-- [x] Simple OAuth
+- [Live API hosting](https://fastapi-heroku-demo.herokuapp.com)

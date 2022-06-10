@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Thu Jun  9 22:11:02 2022
+# Make data base, printed on Fri Jun 10 10:05:23 2022
 
 # Variables
 
@@ -41,7 +38,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/hf/wdrgnnbd71s9_s249s9b42sr0000gn/T/vscode-ipc-c44d9695-a970-4d81-af37-11a9eac644ca.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/hf/wdrgnnbd71s9_s249s9b42sr0000gn/T/vscode-ipc-caa15f92-e8de-4c07-ae9d-21f64b99be3a.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -73,7 +70,7 @@ VSCODE_CODE_CACHE_PATH = /Users/guywicks/Library/Application Support/Code/Cached
 # environment
 LOGNAME = guywicks
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -132,6 +129,7 @@ LC_ALL = C
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
+ 
 # default
 .INCLUDE_DIRS = /usr/local/include
 # environment
@@ -142,7 +140,6 @@ LANG = C
 VSCODE_PID = 66140
 # variable set hash-table stats:
 # Load=63/1024=6%, Rehash=0, Collisions=1/87=1%
- 
 
 # Pattern-specific Variable Values
 
@@ -178,7 +175,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-09 22:00:27
+#  Last modified 2022-06-09 22:56:37
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -234,7 +231,7 @@ serve:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 2):
-	mkdocs serve &
+	mkdocs serve
 	
 
 install:
@@ -258,6 +255,8 @@ install:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun  9 22:11:02 2022
+# Finished Make data base on Fri Jun 10 10:05:23 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
