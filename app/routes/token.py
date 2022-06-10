@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 from app.models.token import Token
-from app.models.user import authenticate_user, fake_users_db, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, timedelta
+from app.models.user import authenticate_user, fake_users_db, create_access_token, ACCESS_TOKEN_EXPIRE_SECONDS, timedelta
 
 router = APIRouter()
 
@@ -22,8 +22,12 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
             detail="Incorrect username or password",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token_expires = timedelta(seconds=ACCESS_TOKEN_EXPIRE_SECONDS)
     access_token = create_access_token(
         data={"sub": user.username}, expires_delta=access_token_expires
     )
-    return {"access_token": access_token, "token_type": "bearer"}
+    return {
+        "access_token": access_token,
+        "expires_in": ACCESS_TOKEN_EXPIRE_SECONDS,
+        "token_type": "bearer"
+    }
