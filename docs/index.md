@@ -11,5 +11,7 @@ Demo service only. Dummy 'endpoints' have been generated as examples.
 - [Material](https://squidfunk.github.io/mkdocs-material/)
 - [FastAPI](https://fastapi.tiangolo.com/)
 
-
-Mkdocs
+## Dependencies
+- Python 3.10+
+- Mkdocs
+- FastAPI
