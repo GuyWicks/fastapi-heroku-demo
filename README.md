@@ -2,7 +2,7 @@
 
 > Sadly, Heroku have withdrawn their free-tier layer (Nov 2022) so the live-demos no longer work.
 
-Simple OAuth2 API implementation using Heroku to host.
+Simple OAuth2 API implementation using Heroku to host, based on [OAuth2 with Password (and hashing), Bearer with JWT tokens](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/)
 
 username: `johndoe`  
 password: `secret`  
